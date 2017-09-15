@@ -6,7 +6,7 @@
 </div>
 <div class="row features clearfix">
     {% endif %}
-    <div class="feature col-sm-4">
+    <div class="feature col-sm-{%if features.size ==1%}12{%elsif features.size ==2%}6{%else%}4{%endif%}">
         <div class="inner outline">
         {% if item.icon.img_path %}
           <i><img src="{{ item.icon.img_path }}" alt="{{ item.title }}"/></i>
